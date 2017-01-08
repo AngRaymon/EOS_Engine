@@ -122,7 +122,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\EosEngine.cpp" />
-    <ClCompile Include="Source\EOS_Renderer.cpp" />
+    <ClCompile Include="Source\Graphics\EOS_Renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\EosEngine.h" />
