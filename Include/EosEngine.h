@@ -1,15 +1,16 @@
 #ifndef _EOSAPP_H_
 #define _EOSAPP_H_
-#include "EOS_Renderer.h"
 
 struct SDL_Window;
 struct SDL_Renderer;
+class IRenderer;
 
 class EosEngine
 {
 private:
 	int m_nErrorCode;
-	EOSRenderer* m_pRenderer;
+	IRenderer* m_pRenderer;
+	void DrawTest();
 
 public:
 	EosEngine();

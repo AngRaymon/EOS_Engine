@@ -8,17 +8,50 @@
     <Filter Include="Graphics">
       <UniqueIdentifier>{707877b9-e01e-4174-a83f-9b5a016dc961}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ThirdParty">
+      <UniqueIdentifier>{9688cf8e-a190-4522-a751-751380037a76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EOSEngine">
+      <UniqueIdentifier>{9c7f9c93-694b-42c9-883b-d125a4a9bc00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors">
+      <UniqueIdentifier>{493b9174-ee0c-4033-9798-ff43132d90d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\EOS_Renderer.h">
       <Filter>Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="Include\EosEngine.h" />
+    <ClInclude Include="Include\EosEngine.h">
+      <Filter>EOSEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\interfaces.h">
+      <Filter>EOSEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\EosStd.h" />
+    <ClInclude Include="Source\Actors\Actor.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Actors\ActorComponent.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Actors\RenderComponent.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Graphics\EOS_Renderer.cpp">
       <Filter>Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="Source\EosEngine.cpp" />
+    <ClCompile Include="Source\EosEngine.cpp">
+      <Filter>EOSEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\EosStd.cpp" />
+    <ClCompile Include="ThirdParty\glew\src\glew.c">
+      <Filter>ThirdParty</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Actors\Actor.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

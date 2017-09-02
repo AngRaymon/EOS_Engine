@@ -1,4 +1,8 @@
+#include "EosStd.h"
 #include "EosEngine.h"
+#include "EOS_Renderer.h"
+#include "Actors/Actor.h"
+#include "Actors/ActorComponent.h"
 #include "SDL.h"
 
 EosEngine::EosEngine() : m_nErrorCode(0) {
@@ -23,10 +27,15 @@ bool EosEngine::Update() {
 	bool running = true;
 	SDL_Event e;
 	SDL_PollEvent(&e);
+	DrawTest();
 	switch (e.type) {
 	case SDL_QUIT:
 		running = false;
 		break;
 	}
 	return running;
+}
+
+void EosEngine::DrawTest() {
+	m_pRenderer->Render();
 }

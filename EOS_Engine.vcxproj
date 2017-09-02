@@ -77,7 +77,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>.\Include;.\ThirdParty\SDL2\Include;.\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\Include;.\ThirdParty\glew\include;.\ThirdParty\SDL2\Include;.\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>EosStd.h</PrecompiledHeaderFile>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>
@@ -121,12 +124,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Actors\Actor.cpp" />
     <ClCompile Include="Source\EosEngine.cpp" />
+    <ClCompile Include="Source\EosStd.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Source\Graphics\EOS_Renderer.cpp" />
+    <ClCompile Include="ThirdParty\glew\src\glew.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\EosEngine.h" />
     <ClInclude Include="Include\EOS_Renderer.h" />
+    <ClInclude Include="Source\Actors\Actor.h" />
+    <ClInclude Include="Source\Actors\ActorComponent.h" />
+    <ClInclude Include="Source\Actors\RenderComponent.h" />
+    <ClInclude Include="Source\EosStd.h" />
+    <ClInclude Include="Source\interfaces.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
