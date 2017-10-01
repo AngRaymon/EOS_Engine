@@ -38,6 +38,9 @@
     <ClInclude Include="Source\Actors\RenderComponent.h">
       <Filter>Actors</Filter>
     </ClInclude>
+    <ClInclude Include="Include\EOSLogger.h">
+      <Filter>EOSEngine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Graphics\EOS_Renderer.cpp">
@@ -52,6 +55,9 @@
     </ClCompile>
     <ClCompile Include="Source\Actors\Actor.cpp">
       <Filter>Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="EOSLogger.cpp">
+      <Filter>EOSEngine</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -4,6 +4,7 @@
 #include "Actors/Actor.h"
 #include "Actors/ActorComponent.h"
 #include "SDL.h"
+#include "EOSLogger.h"
 
 EosEngine::EosEngine() : m_nErrorCode(0) {
 	Init();

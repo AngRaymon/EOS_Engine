@@ -1,6 +1,8 @@
 #pragma once
 
 class ActorComponent {
+	friend class ActorFactory;
+
 protected:
 	StrongActorPtr m_pOwner;
 

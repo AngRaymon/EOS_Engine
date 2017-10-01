@@ -15,6 +15,7 @@ public:
 	~Actor(void);
 
 	bool Init(void);
+	void PostInit(void);
 	void Destroy(void);
 	void Update(int deltaMs);
 

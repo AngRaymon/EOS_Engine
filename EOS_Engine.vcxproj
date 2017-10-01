@@ -124,6 +124,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EOSLogger.cpp" />
     <ClCompile Include="Source\Actors\Actor.cpp" />
     <ClCompile Include="Source\EosEngine.cpp" />
     <ClCompile Include="Source\EosStd.cpp">
@@ -136,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\EosEngine.h" />
+    <ClInclude Include="Include\EOSLogger.h" />
     <ClInclude Include="Include\EOS_Renderer.h" />
     <ClInclude Include="Source\Actors\Actor.h" />
     <ClInclude Include="Source\Actors\ActorComponent.h" />

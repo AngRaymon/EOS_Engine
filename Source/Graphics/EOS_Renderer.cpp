@@ -3,6 +3,7 @@
 #include "SDL.h"
 #include "GL/glew.h"
 #include "SDL_opengl.h"
+#include "EOSLogger.h"
 
 static const GLchar* vertexShaderSource[] = {
 	"#version 140\n" \
@@ -60,7 +61,7 @@ void EOSRenderer::init() {
 	//Default Vsync off
 	if (SDL_GL_SetSwapInterval(0) < 0) {
 		//Nothing currently
-		printf("Warning: Unable to set VSync! SDL Error: %s\n", SDL_GetError());
+		WLOG << " Unable to set VSync! SDL Error: " << SDL_GetError();
 	}
 	m_nErrorCode = initGL();
 }
